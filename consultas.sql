@@ -28,3 +28,30 @@ SELECT COUNT(*) AS 'Q_VENTA', NUM_VENTA
 FROM CLIENTES
 GROUP BY NUM_VENTA 
 ORDER BY Q_VENTA DESC
+
+----------------------------------
+----------- SUM ------------------
+
+SELECT SUM(NUM_VENTA) FROM CLIENTES
+
+SELECT SUM(NUM_VENTA) FROM CLIENTES
+WHERE CATEGORIA = 'Entretención'
+
+---------------------------------
+----------- AVG -----------------
+
+
+SELECT AVG(NUM_VENTA) FROM CLIENTES
+
+SELECT AVG(NUM_VENTA) FROM CLIENTES
+WHERE PAIS = 'Alemania'
+
+---------------------------------
+--------- MAX MIN ---------------
+
+SELECT MIN(NUM_VENTA) AS 'MENOR_CANTIDAD' FROM CLIENTES 
+
+SELECT MAX(NUM_VENTA) AS 'MAYOR_CANTIDAD' FROM CLIENTES 
+
+SELECT MAX(NUM_VENTA) AS 'MAXIMO_ALEM' FROM CLIENTES 
+WHERE PAIS = 'Alemania'
